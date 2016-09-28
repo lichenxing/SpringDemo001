@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+<!--配置名为person的Bean  -->
+<bean id="personImpl" class="com.telek.dao.PersonImpl">
+    <!--控制调用setAxe（）方法，将容器中的axe Bean作为传入参数  -->
+   <!--  <property  name="axe" ref="axeImpl"/> -->
+    <property  name="axe" ref="axeSteelImpl"/>
+</bean>
+<!--配置名为axe的Bean  -->
+<bean id = "axeImpl" class="com.telek.dao.AxeImpl"/>
+<bean id = "axeSteelImpl" class="com.telek.dao.AxeSteelImpl"/>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </beans>
